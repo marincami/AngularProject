@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cmp-databinding-start": {
+    "bindIt": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/cmp-databinding-start",
+            "outputPath": "dist/bindIt",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "cmp-databinding-start:build"
+            "browserTarget": "bindIt:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "cmp-databinding-start:build:production"
+              "browserTarget": "bindIt:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cmp-databinding-start:build"
+            "browserTarget": "bindIt:build"
           }
         },
         "test": {
@@ -111,19 +111,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "cmp-databinding-start:serve"
+            "devServerTarget": "bindIt:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "cmp-databinding-start:serve:production"
+              "devServerTarget": "bindIt:serve:production"
             }
           }
         }
       }
-    }
-  },
-  "defaultProject": "cmp-databinding-start",
-  "cli": {
-    "analytics": false
-  }
+    }},
+  "defaultProject": "bindIt"
 }
